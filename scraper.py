@@ -8,7 +8,9 @@ def get_product_details(url):
     if response.status_code != 200:
         raise Exception(f"response didnt return status code 200, but status code {response.status_code}")
     
-    print(response.content)
+    return response.content
+
+print(get_product_details("https://www.a1.bg/mgw-web/eshop/products/grid?PriceTypeFilter=2&DeviceType=Smartphone&PresetCollectionId=1&CurrentPage=1&perPage=100"))
 
 
-get_product_details("https://www.emag.bg/")
+
